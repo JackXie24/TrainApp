@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+{% block content %}
+	{% for person in list %}
+		<p>no image</p>
+		<h1> {{person.name}} </h1>
+		<p>Event: {{person.event}}</p>
+	{% endfor %}
+{% endblock content%}
