@@ -18,6 +18,8 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from roster.views import rosterView
 from user.views import register, profile, dashborad
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -30,3 +32,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout')
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

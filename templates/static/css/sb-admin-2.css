@@ -6587,9 +6587,17 @@ button.bg-dark:focus {
 }
 
 .rounded-circle {
-  border-radius: 50% !important;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
+.rounded-circle img {
+  width: 100%;
+  height: auto;
+}
 .rounded-pill {
   border-radius: 50rem !important;
 }

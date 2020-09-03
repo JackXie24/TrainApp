@@ -26,4 +26,4 @@ def dashborad(request):
 
 @login_required
 def profile(request):
-    return render(request, 'index.html')
+    return render(request, 'profile.html')
